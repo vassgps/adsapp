@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import ChevronDown from "../icons/ChevronDown";
+import ChevronDown from "../Icons/ChevronDown";
 import ChevronForward from "../Icons/ChevronForward";
 
 
