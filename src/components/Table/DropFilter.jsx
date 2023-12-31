@@ -1,4 +1,3 @@
-import Dropdowns from "../DropDown";
 
 
 const DropFilter = ({ options = [], onFilterClick }) => {
