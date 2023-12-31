@@ -307,18 +307,6 @@
   --clr-primary-900: hsl(218, 33%, 9%);
 }
 
-html {
-  color-scheme: dark;
-}
-
-body {
-  display: grid;
-  min-block-size: 100vh;
-  place-content: center;
-  font-family: system-ui;
-  font-size: 1.125rem;
-  background-color: var(--clr-primary-800);
-}
 
 .tag-list {
   margin: 0;
