@@ -2,7 +2,7 @@ import { useState } from "react";
 import ChevronDown from "../Icons/ChevronDown";
 import classNames from "classnames";
 
-const Dropdowns = ({
+const Dropdown = ({
   buttonClassName = "",
   optionsList = [],
   onClick = () => {},
@@ -77,4 +77,4 @@ const Dropdowns = ({
   return null;
 };
 
-export default Dropdowns;
+export default Dropdown;
