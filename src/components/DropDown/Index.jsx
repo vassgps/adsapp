@@ -12,7 +12,7 @@ const Dropdowns = ({
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState({
     name: "",
-    value: "",
+    value: "",  
   });
 
   const onOptionClick = ({ name, value }) => {
