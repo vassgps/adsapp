@@ -10,7 +10,8 @@ import axiosInstance from "./Config/axios";
 import "./assets/Table.scss";
 import Add from "./pages/Add";
 import AdPlayer from "./pages/Add/AdPlayer";
-
+  import { ToastContainer } from "react-toastify";
+  import "react-toastify/dist/ReactToastify.css";
 config({ axios: axiosInstance });
 function App() {
   const router = createBrowserRouter([
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       <RouterProvider router={router} />
     </>
   );

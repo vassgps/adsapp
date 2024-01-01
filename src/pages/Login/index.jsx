@@ -1,6 +1,7 @@
 
 import Form from "../../components/Form/Form"
 import { loginForm } from '../../Utils/Forms/login'
+
 const Login = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center px-4 ">

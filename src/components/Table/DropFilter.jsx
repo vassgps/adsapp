@@ -1,5 +1,5 @@
 
-
+import Dropdowns from "../../components/DropDown"
 const DropFilter = ({ options = [], onFilterClick }) => {
   return (
     <div>

@@ -3,6 +3,7 @@ import axiosInstance from "../../Config/axios";
 import DataTable from "../../components/Table";
 import { modal } from "../../components/Modal";
 
+
 const AdvertismentList = () => {
     const [rowData,setRowData] = useState([])
   useEffect(() => {
