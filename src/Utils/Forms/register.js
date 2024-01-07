@@ -78,9 +78,30 @@ let RegisterForm = {
         text: "Department",
       },
       input: {
-        type: "text",
+        type: "select",
         name: "department",
         placeholder: "enter the department",
+        className: "text-red-500",
+        options: [
+          {
+            label: "Administration",
+            value: 1,
+            className: "",
+          },
+
+          {
+            label: "Sales",
+            value: 2,
+          },
+          {
+            label: "Support",
+            value: 3,
+          },
+          {
+            label: "Engineering",
+            value: 4,
+          },
+        ],
       },
     },
     {
@@ -171,7 +192,12 @@ let RegisterForm = {
         username: values.username,
         password: values.password,
       };
+      
     },
+    onAfterApiSuccess: (res) => {
+        
+        window.location.href = "/login";
+      },
   },
 };
 export { RegisterForm };

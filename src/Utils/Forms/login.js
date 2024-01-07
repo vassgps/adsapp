@@ -39,7 +39,7 @@ let loginForm = {
         name: "submit",
         displayText: "Login",
         className:
-          "bg-cyan-500 text-white  py-[6px] rounded-md w-full hover:bg-hover-color ",
+          "bg-cyan-500 text-white  py-[6px] rounded-md w-full hover:bg-hover-color mt-[10px]",
       },
     ],
   },

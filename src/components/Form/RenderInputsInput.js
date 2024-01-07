@@ -5,6 +5,7 @@ import Checkbox from "./InputComponents/Checkbox";
 import RadioButton from "./InputComponents/RadioButton";
 import Date from "./InputComponents/Date";
 import Select from "./InputComponents/Select";
+import File from "./InputComponents/File";
 export const RenderInputs = ({
   template,
   values,
@@ -55,6 +56,9 @@ export const RenderInputs = ({
           }
           if (input?.type === "select") {
             return <Select key={index} {...inputProps} />;
+          }
+          if (input?.type === "file") {
+            return <File key={index} {...inputProps} />;
           }
           return <div key={index}> No Input Rendered </div>;
         }

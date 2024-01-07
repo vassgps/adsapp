@@ -1,26 +1,32 @@
 // TEXT INPUTS
 .input-container {
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
   line-height: 1rem;
   margin-bottom: 16px;
+
   .label {
     margin-bottom: 0.25rem;
     display: block;
   }
+
   .input {
     width: 100%;
     margin-top: 0.25rem;
     display: block;
-    border-radius: 0.375rem; /* 6px */
+    border-radius: 0.375rem;
+    /* 6px */
     border: 1px solid rgb(229 231 235);
     background: #fff;
     padding: 0.5rem 1rem;
-    font-size: 0.75rem; /* 12px */
+    font-size: 0.75rem;
+    /* 12px */
     line-height: 1rem;
 
     &:focus {
       outline: none;
     }
+
     &[data-invalid="true"]:not(:focus),
     &:focus[data-invalid="true"] {
       border: 1px solid rgb(239 68 68);
@@ -36,6 +42,7 @@
       color: rgb(107 114 128);
       cursor: not-allowed;
     }
+
     //=== DISABLED INPUT=====
 
     &::placeholder {
@@ -50,11 +57,13 @@
       margin-bottom: 0;
       display: none;
       cursor: pointer;
-      & ~ label {
+
+      &~label {
         position: relative;
         cursor: pointer;
         display: flex;
         align-items: center;
+
         &:before {
           content: "";
           background-color: transparent;
@@ -71,14 +80,15 @@
           transition: 0.2s background ease-in-out, 0.1s box-shadow ease-in-out;
         }
       }
-      &:checked ~ label:before {
+
+      &:checked~label:before {
         background: #ffffff;
         border: 2px solid rgba(170, 170, 170, 0.541);
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1),
           0 0 0 4px rgba(41, 40, 41, 0.13);
       }
 
-      &:checked ~ label::after {
+      &:checked~label::after {
         content: "";
         position: absolute;
         left: 4px;
@@ -92,6 +102,57 @@
         transform: rotate(45deg);
       }
     }
+
+    &[type="file"] {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      &[data-invalid="true"]:not(:focus),
+      &:focus[data-invalid="true"]~label {
+        border: 1px solid rgb(239 68 68);
+      }
+
+      &:focus:not([data-invalid="true"])~label {
+        border: 1px solid rgb(23 23 23);
+      }
+
+      // DISABLED INPUT
+      &:disabled~label {
+        background: rgb(249 250 251);
+        color: rgb(107 114 128);
+        cursor: not-allowed;
+      }
+
+      //=== DISABLED INPUT=====
+
+      &::placeholder {
+        color: rgb(156 163 175);
+      }
+
+      &~label {
+        position: relative;
+        cursor: pointer;
+        margin-top: 0.25rem;
+        display: block;
+        border-radius: 0.375rem;
+        /* 6px */
+        border: 1px solid rgb(229 231 235);
+        background: #fff;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        /* 12px */
+        line-height: 1rem;
+      }
+    }
+
     // ===/CHECKBOX===
 
     // ===RADIO===
@@ -103,12 +164,13 @@
       display: none;
       cursor: pointer;
 
-      & ~ label {
+      &~label {
         position: relative;
         cursor: pointer;
         display: flex;
         align-items: center;
         font-family: "Roboto";
+
         &:before {
           content: "";
           background-color: transparent;
@@ -125,14 +187,15 @@
           transition: 0.2s background ease-in-out, 0.1s box-shadow ease-in-out;
         }
       }
-      &:checked ~ label:before {
+
+      &:checked~label:before {
         background: #fff;
         border: 2px solid #174a84;
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1),
           0 0 0 4px rgba(41, 40, 41, 0.13);
       }
 
-      &:checked ~ label::after {
+      &:checked~label::after {
         content: "";
         position: absolute;
         left: 7px;
@@ -143,21 +206,29 @@
         border-radius: 50%;
       }
     }
+
     // ===/RADIO===
   }
 }
+
 .error {
   color: rgb(239 68 68);
 }
+
 @media (min-width: 640px) {
   .input-container {
-    font-size: 0.875rem; /* 14px */
-    line-height: 1.25rem; /* 20px */
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+
+    /* 20px */
     .input {
-      border-radius: 0.5rem; /* 8px */
+      border-radius: 0.5rem;
+      /* 8px */
     }
   }
 }
+
 // TEXT INPUTS
 
 //===BUTTON====
@@ -175,8 +246,10 @@
     color: rgb(202, 206, 215);
     cursor: not-allowed;
   }
+
   &[type="submit"] {
     cursor: pointer;
   }
 }
+
 //===/BUTTON====

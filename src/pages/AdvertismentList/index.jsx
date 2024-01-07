@@ -3,6 +3,8 @@ import axiosInstance from "../../Config/axios";
 import DataTable from "../../components/Table";
 import { modal } from "../../components/Modal";
 
+import AdsModal from "../../components/AdsList/AdsModal"
+
 
 const AdvertismentList = () => {
     const [rowData,setRowData] = useState([])
@@ -86,9 +88,7 @@ const AdvertismentList = () => {
     modal({
       show: true,
       maxWidth: 450,
-      component: () => {
-        return 
-      },
+      component: () => <AdsModal />,
       header: {
         heading: "Add ADD",
       },
@@ -98,9 +98,9 @@ const AdvertismentList = () => {
   return (
     <div >
       <div className="flex justify-end">
-      <div className="flex justify-center bg-primary hover:bg-hover-color  items-center rounded-md px-2 py-1 w-[90px] " onClick={openAddComponent}>
-      <h1 className="text-white">Add Ad</h1>
-      </div>
+      <button className="flex justify-center bg-primary hover:bg-hover-color  items-center rounded-md px-2 py-1 w-[90px] " onClick={openAddComponent}>
+      Add Ad
+      </button>
       </div>
       <DataTable
         columnDef={{ tableHeaders: headers }}
