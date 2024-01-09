@@ -70,10 +70,11 @@ let addAds = {
     },
   ],
   validationSchema: {
-    ad_name: Yup.string().required("please enter the Username"),
-    top_text: Yup.string().required("please enter the password"),
-    bottom_text: Yup.string().required("please enter the password"),
-    media_file: Yup.string().required("please enter the password"),
+    ad_name: Yup.string().required("please enter the Ad Name "),
+    top_text: Yup.string().required("please enter the Top Text"),
+    bottom_text: Yup.string().required("please enter the bottom Text"),
+    media_file: Yup.string().required("please insert the Ad"),
+    thumbnail: Yup.string().required("please insert the Thumbnail"),
   },
   buttons: {
     items: [
@@ -91,17 +92,18 @@ let addAds = {
     api: "/cms/advt/advertisement-details/",
     method: "post",
     body: ({ values }) => {
-       
-        let formData= new FormData()
-        for(let key in values){
-            console.log(key,values[key]);
-        formData.append("add_name",values[key])
-        }
-        console.log(formData);
-      return formData
+      let formData = new FormData();
+
+      for (let key in values) {
+        formData.append(key, values[key]);
+      }
+
+      console.log("formdata", formData);
+      return formData;
     },
+
     onAfterApiSuccess: (res) => {
-      console.log(res.data.access_token);
+      // console.log(res.data.access_token);
       localStorage.setItem("accesToken", res.data.access_token);
       window.location.href = "/dealer/advertismentlist";
     },

@@ -98,7 +98,7 @@ const AdvertismentList = () => {
   return (
     <div >
       <div className="flex justify-end">
-      <button className="flex justify-center bg-primary hover:bg-hover-color  items-center rounded-md px-2 py-1 w-[90px] " onClick={openAddComponent}>
+      <button className="flex justify-center bg-primary text-white font-semibold hover:bg-hover-color  items-center rounded-md px-2 py-1 w-[90px] " onClick={openAddComponent}>
       Add Ad
       </button>
       </div>
